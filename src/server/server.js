@@ -36,6 +36,19 @@ app.post('/coordinates', function (req, res) {
       })
 })
 
+app.post('/weather', function (req, res) {
+    let lat = req.body.lat
+    let lng = req.body.lng
+    let url = `https://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${lng}&days=1&units=I&key=fcb6b5ce0e174e48af75ad37341acbff`
+    axios.get(url)
+    .then(function(response) {
+        res.send(response.data)
+    })
+    .catch(function (error) {
+        console.log(error);
+      })
+  })
+
 //GET Route
 app.get('/', function (req, res){
     res.sendFile('dist/index.html')

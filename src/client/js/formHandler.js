@@ -12,7 +12,7 @@ function handleSubmit(event) {
     if (Client.formChecker(formInput).length === 0) {
         Client.getCoordinates(city, country)
     } else {
-        alert('not a valid entry')
+        alert('Not a valid entry')
     }
 }
 
