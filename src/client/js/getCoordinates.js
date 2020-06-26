@@ -5,18 +5,22 @@ const getCoordinates = (city, country) => {
         country: country
     };
 
-    fetch("/coordinates", {
+    fetch("http://localhost:8081/coordinates", {
         method: "POST",
         credentials: "same-origin",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(location)
+        body: JSON.stringify(locationInput)
     })
         .then(res => res.json())
         .then(function(res) {
-            let coordinates = res.geonames;
-            console.log(coordinates);
-            return coordinates
+            let coordinateObject = res.geonames[0];
+            //console.log(coordinateObject);
+            let coordinates = {
+                lat: coordinateObject.lat,
+                lng: coordinateObject.lng
+            }
+            console.log(coordinates)
         })
 }
 
-export{ getCoordinates }
+export { getCoordinates }
