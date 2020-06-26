@@ -26,12 +26,10 @@ app.post('/coordinates', function (req, res) {
 
     axios.get(url)
     .then(function(response) {
-        //handle success 
         console.log(response.data)
         res.send(response.data)
     })
     .catch(function (error) {
-        // handle error
         console.log(error);
       })
 })
@@ -48,6 +46,19 @@ app.post('/weather', function (req, res) {
         console.log(error);
       })
   })
+
+app.post('/image', function (req, res) {
+    let city = req.body.city
+    //let country = req.body.country
+    let url = `https://pixabay.com/api/?key=17226527-53a81ada824d8e46fd8fae5ba&q=${city}&image_type=photo&category=travel&safesearch=true`
+    axios.get(url)
+    .then(function(response) {
+        res.send(response.data)
+    })
+    .catch(function (error) {
+        console.log(error);
+      })
+})
 
 //GET Route
 app.get('/', function (req, res){
