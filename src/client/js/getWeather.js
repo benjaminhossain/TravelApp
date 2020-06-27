@@ -10,10 +10,12 @@ const getWeather = (weatherReq) => {
         .then(function(res) {
             const weatherData = res.data[0];
             //console.log(weatherData);
-            const temp = weatherData['temp'];
-            console.log(temp)
+            const high = weatherData['high_temp'];
+            const low = weatherData['low_temp'];
+            const wind = weatherData['wind_spd'];
+            console.log(high, low, wind)
 
-            document.getElementById('weather').innerText = `It's going to be ${temp}`
+            document.getElementById('weather').innerHTML = `High: ${high}F <br> Low: ${low}F <br> Wind: ${wind} mph`
         })
 }
 

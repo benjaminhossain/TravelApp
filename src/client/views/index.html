@@ -2,32 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>Travel App</title>
 </head>
 <body>
-    <nav>Travel App</nav>
-    <main>
-        <section id="planner">
-            <p>Plan Your Next Adventure</p>
-            <form>
-                <label for="destination">Destination:</label><br>
-                <input type="text" id="city" placeholder="Enter city name"><br>
-                <input type="text" id="country" placeholder="Country code (ex: US/UK/MX)"><br>
-                <label for="date">Departure Date:</label><br>
-                <input type="text" id="departureDate" placeholder="mm/dd/yyyy" value=""><br>
-                <label for="date">Return Date:</label><br>
-                <input type="text" id="returnDate" placeholder="mm/dd/yyyy" value=""><br>
-                <input type="submit" id="submit" value="Submit"> 
-            </form>
-        </section>
-        <section id="results">
-            <div id="whereTo"></div>
-            <div id="image"></div>
-            <div id="duration"></div>
-            <div id="weather"></div>
-            <div id="daysLeft"></div>
-        </section>
-    </main>
+    <div id="page_container">
+        <nav>Travel App</nav>
+        <div id="container">
+            <main>
+                <section id="planner">
+                    <p>Plan Your Next Adventure</p>
+                    <form>
+                        <label for="destination">Destination:</label><br>
+                        <input type="text" id="city" placeholder="Enter city name"><br>
+                        <input type="text" id="country" placeholder="Country code (ex: US/UK/MX)"><br>
+                        <label for="date">Departure Date:</label><br>
+                        <input type="text" id="departureDate" placeholder="mm/dd/yyyy" value=""><br>
+                        <label for="date">Return Date:</label><br>
+                        <input type="text" id="returnDate" placeholder="mm/dd/yyyy" value=""><br>
+                        <input type="submit" id="submit" value="Submit"> 
+                    </form>
+                </section>
+                <section id="results">
+                    <div id="whereTo"></div>
+                    <div id="image"></div>
+                    <div id="duration"></div>
+                    <div id="weather"></div>
+                    <div id="daysLeft"></div>
+                </section>
+            </main>
+        </div>
+        <div id="footer">&copy Benjamin Hossain 2020</div>
+    </div>
 </body>
 </html>

@@ -8,6 +8,9 @@ import { handleSubmit } from './js/formHandler'
 import { performAction } from './js/performAction'
 
 import './styles/style.scss'
+import './styles/planner.scss'
+import './styles/results.scss'
+import './styles/footer.scss'
 
 window.addEventListener('load', function (event) {
     performAction();

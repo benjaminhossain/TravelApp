@@ -6,7 +6,7 @@ const countdown = function (departure) {
     const distance = newDepartureDate - today;
     const daysAway = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    document.getElementById('daysLeft').innerText = `${daysAway} days away from today.`
+    document.getElementById('daysLeft').innerText = `You are ${daysAway} days away from your next adventure!`
     console.log(daysAway + " days away")
     return daysAway;
 }

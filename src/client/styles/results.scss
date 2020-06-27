@@ -1,0 +1,19 @@
+#results {
+    text-align: center;
+    margin: 30px 10px 50px 10px;
+    font-size: 1.5em;
+    
+    #image, #duration, #weather, #daysLeft {
+        margin: 10px;
+    }
+    #whereTo {
+        font-size: 2em;
+    }
+    #duration{
+        text-decoration: underline;
+    }
+    #image img {
+        width: 50vw;
+        max-height: 50vh;
+    }
+}

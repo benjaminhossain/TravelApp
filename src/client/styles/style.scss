@@ -2,56 +2,15 @@ body{
     margin: 0;
 }
 
+#page_container {
+    position: relative;
+    min-height: 100vh;
+}
+#container{
+    padding-bottom: 3rem;
+}
 nav {
     font-size: 2.5em;
-    padding: 15px 0 0 15px;
-}
-
-#planner {
-    background:
-    linear-gradient(
-      rgba(255, 255, 255, 0.40),
-      rgba(255, 255, 255, 0.40)
-    ),
-    url("https://adventure.com/wp-content/uploads/2020/03/Scotland-Helen-Ochyra-visitscotland_38462184993-1180x664.jpg");
-    background-size: cover;
-    height: 70vh;
-}
-    p {
-        text-align: center;
-        font-size: 2.5em;
-        padding-top: 60px;
-    }
-    form {
-        text-align: center;
-        font-size: 1.5em;
-        input {
-         width: 30%;
-         padding: 12px 10px;
-         margin: 6px 0;
-         border: 1px solid #ccc;
-         border-radius: 5px;
-         box-sizing: border-box;
-        }
-        input[type=submit] {
-            width: 30%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 10px;
-            margin: 6px 0;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-          }
-}
-    
-
-
-#results {
-    text-align: center;
-    margin-top: 30px;
-}
-#image img {
-    width: 50vw;
-    max-height: 50vh;
+    padding: 15px;
+    box-shadow: 3px 3px 10px grey;
 }
