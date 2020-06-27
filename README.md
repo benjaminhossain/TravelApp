@@ -10,4 +10,16 @@ This is a travel planning app which takes your destination and the dates you are
 - Webpack 
 - Sass 
 
+## Getting started
+
+- `git clone`
+- `cd` into your new folder and run:
+- `npm install`
+
+## Run
+- On your terminal:
+    - `npm run build-prod`
+    - `npm run build-dev`
+- On a separate terminal:
+    - `npm run start`
 
