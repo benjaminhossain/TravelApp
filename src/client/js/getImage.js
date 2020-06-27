@@ -1,5 +1,5 @@
-const getImage = (city, country) => {
-
+const getImage = (city) => {
+    
     let location = {
         city: city
         //country: country
@@ -13,8 +13,8 @@ const getImage = (city, country) => {
     })
         .then(res => res.json())
         .then(function(res) {
-            let imageArray = res.hits;
-            console.log(imageArray);
+            let imageURL = res.hits[0].largeImageURL;
+            console.log(imageURL);
         })
 }
 

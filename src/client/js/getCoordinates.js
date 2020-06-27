@@ -20,7 +20,8 @@ const getCoordinates = (city, country) => {
                 lng: coordinateObject.lng
             }
             console.log(coordinates);
-            Client.getWeather(coordinates)
+            Client.getWeather(coordinates);
+            Client.getImage(city);
         })
 }
 
