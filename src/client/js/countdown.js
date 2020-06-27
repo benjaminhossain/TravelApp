@@ -8,6 +8,7 @@ const countdown = function (departure) {
 
     document.getElementById('daysLeft').innerText = `You are ${daysAway} days away from your next adventure!`
     console.log(daysAway + " days away")
+
     return daysAway;
 }
 
