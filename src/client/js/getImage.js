@@ -13,8 +13,13 @@ const getImage = (city) => {
     })
         .then(res => res.json())
         .then(function(res) {
-            let imageURL = res.hits[0].largeImageURL;
+            const imageURL = res.hits[0].largeImageURL;
             console.log(imageURL);
+
+            /*const image = document.createElement('img');
+            image.src = imageURL;*/
+
+            document.getElementById('image').innerHTML = `<img src=${imageURL}>`;
         })
 }
 

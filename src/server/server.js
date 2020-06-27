@@ -37,7 +37,7 @@ app.post('/coordinates', function (req, res) {
 app.post('/weather', function (req, res) {
     let lat = req.body.lat
     let lng = req.body.lng
-    let url = `https://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${lng}&days=1&units=I&key=fcb6b5ce0e174e48af75ad37341acbff`
+    let url = `https://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${lng}&days=4&units=I&key=fcb6b5ce0e174e48af75ad37341acbff`
     axios.get(url)
     .then(function(response) {
         res.send(response.data)
@@ -50,7 +50,7 @@ app.post('/weather', function (req, res) {
 app.post('/image', function (req, res) {
     let city = req.body.city
     //let country = req.body.country
-    let url = `https://pixabay.com/api/?key=17226527-53a81ada824d8e46fd8fae5ba&q=${city}&image_type=photo&category=travel&safesearch=true`
+    let url = `https://pixabay.com/api/?key=17226527-53a81ada824d8e46fd8fae5ba&q=${city}&image_type=photo`
     axios.get(url)
     .then(function(response) {
         res.send(response.data)

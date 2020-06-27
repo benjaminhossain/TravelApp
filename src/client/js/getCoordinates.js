@@ -13,6 +13,8 @@ const getCoordinates = (city, country) => {
     })
         .then(res => res.json())
         .then(function(res) {
+            document.getElementById('whereTo').innerText = `Your trip to ${city}`
+
             let coordinateObject = res.geonames[0];
             //console.log(coordinateObject);
             let coordinates = {

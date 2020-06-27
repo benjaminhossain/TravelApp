@@ -8,11 +8,13 @@ const getWeather = (weatherReq) => {
     })
         .then(res => res.json())
         .then(function(res) {
-            let weatherData = res.data[0];
+            const weatherData = res.data[0];
             //console.log(weatherData);
-            let temp = weatherData['temp'];
+            const temp = weatherData['temp'];
             console.log(temp)
-            })
+
+            document.getElementById('weather').innerText = `It's going to be ${temp}`
+        })
 }
 
 export { getWeather }

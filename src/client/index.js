@@ -6,6 +6,8 @@ import { formChecker } from './js/formChecker'
 import { handleSubmit } from './js/formHandler'
 import { performAction } from './js/performAction'
 
+import './styles/style.scss'
+
 window.addEventListener('load', function (event) {
     performAction();
 });
