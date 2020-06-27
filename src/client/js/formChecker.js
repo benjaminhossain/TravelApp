@@ -2,10 +2,16 @@ const formChecker = (formInput) => {
     let errors =[]
 
     if (!formInput.city) {
-        errors.push('Enter a city')
+        errors.push('')
     }
     if (!formInput.country) {
-        errors.push('Enter a country code')
+        errors.push('')
+    }
+    if (!formInput.departureDate) {
+        errors.push('')
+    }
+    if (!formInput.returnDate) {
+        errors.push('')
     }
 
     return errors;

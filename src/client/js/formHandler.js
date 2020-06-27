@@ -3,19 +3,23 @@ function handleSubmit(event) {
 
     const city = document.getElementById('city').value;
     const country = document.getElementById('country').value;
-    const departure = document.getElementById('departureDate').value;
+    const departureDate = document.getElementById('departureDate').value;
+    const returnDate = document.getElementById('returnDate').value;
 
     let formInput = {
         city: city,
-        country: country
+        country: country,
+        departureDate: departureDate,
+        returnDate: returnDate
     }
 
     if (Client.formChecker(formInput).length === 0) {
         Client.getCoordinates(city, country)
         Client.getImage(city)
-        Client.countdown(departure)
+        Client.countdown(departureDate)
+        Client.duration(departureDate, returnDate)
     } else {
-        alert('Not a valid entry')
+        alert('Please fill in all the fields')
     }
 }
 
