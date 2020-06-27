@@ -21,7 +21,6 @@ const getCoordinates = (city, country) => {
             }
             console.log(coordinates);
             Client.getWeather(coordinates);
-            Client.getImage(city);
         })
 }
 
